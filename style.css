@@ -1,0 +1,243 @@
+/*GERAL*/
+
+@font-face {
+    font-family: "CCEvilSchemes";
+    src: url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.eot");
+    src: url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.svg#CCEvilSchemes Regular")format("svg");
+}
+
+@font-face {
+    font-family: "Trends";
+    src: url(fonts/Trends.ttf) format("truetype");
+}
+
+.comic-neue-regular {
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Neue", Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 67.5%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f8f3a2;
+    min-height: 100svh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Trends";
+    color: #ee5fb7;
+    font-size: calc(+3rem);
+    position: relative;
+    display: inline-block;
+    text-shadow:
+        1px 1px 0px #955de3,
+        2px 2px 0px #955de3,
+        3px 3px 0px #955de3,
+        4px 4px 0px #955de3,
+        5px 5px 0px #955de3,
+        6px 6px 0px #955de3,
+        7px 7px 0px #955de3,
+        8px 8px 0px #955de3,
+        9px 9px 0px #955de3,
+        10px 10px 0px #955de3;
+
+    -webkit-text-stroke: #000 .3px;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+a {
+    display: block;
+    color: #955de3;
+    text-decoration: none;
+    font-family: "CCEvilSchemes", "Comic Neue", Arial, Helvetica, sans-serif;
+    transition: .3s all ease;
+}
+
+a:hover {
+    color: #ee5fb7;
+    transform: scale(1.1);
+}
+
+.barra {
+    width: 100%;
+    background-color: #955de3;
+    border: #955de3 5px solid;
+}
+
+/*HEADER*/
+header {
+    background: rgb(248, 243, 162);
+    background: linear-gradient(90deg, rgba(248, 243, 162, 1) 0%, rgba(243, 213, 82, 1) 60%);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav a {
+    font-size: 1.5rem;
+}
+
+.imgx {
+    width: fit-content;
+    height: fit-content;
+    aspect-ratio: 365/277;
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, black 50%, transparent 100%);
+}
+
+/*MAIN*/
+main {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+main .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main p {
+    margin: 10px 0;
+}
+
+main div {
+    width: 70%;
+}
+
+main .musica {
+    width: fit-content;
+    height: fit-content%;
+    border: #955de3 5px solid;
+    box-shadow: #0005 5px 5px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+main .musica iframe {
+    z-index: 1;
+}
+
+
+main aside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blur {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blur::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, #000 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.blur::after {
+    content: "Dirty Dancing";
+    font-family: Trends;
+    color: #fffc;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+main .links {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .links a {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    width: fit-content;
+    text-shadow: #955de3 3px 3px;
+    color: #ee5fb7;
+    border-radius: 15px;
+    padding: 5px;
+    -webkit-text-stroke: #000 1.2px;
+}
+
+.audio-player {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    flex: 1 1 0;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    background-color: #955de3;
+}
+
+footer h4 {
+    font-size: 2rem;
+    color: #ee5fb7;
+    text-shadow: none;
+}
