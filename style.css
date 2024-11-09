@@ -1,4 +1,8 @@
 /*GERAL*/
+@font-face {
+    font-family: "Spooky";
+    src: url(fonts/Spooky\ Zombie.otf);
+}
 
 @font-face {
     font-family: "CCEvilSchemes";
@@ -8,6 +12,7 @@
         url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.woff")format("woff"),
         url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.ttf")format("truetype"),
         url("https://db.onlinewebfonts.com/t/92eee1c02489f3aa52e25766820f8cbb.svg#CCEvilSchemes Regular")format("svg");
+    font-variant-ligatures: none;
 }
 
 @font-face {
@@ -35,6 +40,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #f8f3a2;
     min-height: 100svh;
 }
@@ -51,16 +58,13 @@ h6 {
     position: relative;
     display: inline-block;
     text-shadow:
-        1px 1px 0px #955de3,
-        2px 2px 0px #955de3,
-        3px 3px 0px #955de3,
-        4px 4px 0px #955de3,
-        5px 5px 0px #955de3,
-        6px 6px 0px #955de3,
-        7px 7px 0px #955de3,
-        8px 8px 0px #955de3,
-        9px 9px 0px #955de3,
-        10px 10px 0px #955de3;
+        1px 0 0px #955de3,
+        2px 0 0px #955de3,
+        3px -1px 0px #955de3,
+        4px -1.5px 0px #955de3,
+        5px -2px 0px #955de3,
+        6px -2.5px 0px #955de3,
+        7px -3px 0px #955de3;
 
     -webkit-text-stroke: #000 .3px;
 }
@@ -77,7 +81,7 @@ a {
     display: block;
     color: #955de3;
     text-decoration: none;
-    font-family: "CCEvilSchemes", "Comic Neue", Arial, Helvetica, sans-serif;
+    font-family: "Spooky", "Comic Neue", Arial, Helvetica, sans-serif;
     transition: .3s all ease;
 }
 
@@ -139,13 +143,15 @@ main .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 main p {
     margin: 10px 0;
 }
 
-main div {
+main .txt {
     width: 70%;
 }
 
@@ -170,8 +176,18 @@ main aside {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+main img[src="img/yunli-protecaodivina.png"] {
+    object-fit: cover;
+    object-position: center;
+    margin-top: 30px;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: #0005 5px 5px;
 }
 
 .blur {
@@ -236,8 +252,30 @@ footer {
     background-color: #955de3;
 }
 
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 footer h4 {
     font-size: 2rem;
     color: #ee5fb7;
     text-shadow: none;
+}
+
+footer a {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+footer a:hover {
+    color: #ee5fb7;
+}
+
+footer ul {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
