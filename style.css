@@ -358,7 +358,8 @@ main .links a {
     margin: 20px;
 }
 
-.info p, .info a {
+.info p,
+.info a {
     font-size: 1.3rem;
 }
 
@@ -384,4 +385,8 @@ main .links a {
 .tocada iframe {
     height: 232px;
     width: 500px;
+}
+
+.bonda h4 {
+    font-size: 1.25rem;
 }
