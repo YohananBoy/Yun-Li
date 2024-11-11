@@ -317,6 +317,10 @@ main .links a {
     box-shadow: #0005 5px 5px;
 }
 
+.album a:hover {
+    transform: scale(1.005);
+}
+
 .album h4 {
     margin: 0;
     text-shadow: none;
@@ -387,6 +391,20 @@ main .links a {
     width: 500px;
 }
 
-.bonda h4 {
-    font-size: 1.25rem;
+.bonda ul::-webkit-scrollbar {
+    width: 12px;
+}
+
+.bonda ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bonda ul::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.bonda ul {
+    overflow-x: scroll;
 }
